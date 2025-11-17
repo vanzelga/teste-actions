@@ -15,7 +15,5 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Executa script de teste
-        run: |
-          echo "Rodando no GitHub Actions"
-          python -c "print('Funcionou!')"
+      - name: Executa seu script
+        run: python .github/workflows/historico_justificativa.py
