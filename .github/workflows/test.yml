@@ -16,4 +16,11 @@ jobs:
           python-version: '3.10'
 
       - name: Executa seu script
-        run: python .github/workflows/historico_justificativa.py
+        run: |
+          python .github/workflows/historico_justificativa.py
+
+      - name: Upload do Excel gerado
+        uses: actions/upload-artifact@v4
+        with:
+          name: resultado-excel
+          path: historico_justificativa_teste.xlsx
